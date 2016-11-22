@@ -23,3 +23,6 @@ continent_mass_differences<-select(mammal_sizes,status,continent,log_mass) %>%
   summarise(mean_mass=mean(log_mass, na.rm=TRUE))
 continent_mass_differences<-spread(continent_mass_differences,continent,mean_mass)
 write.csv(continent_mass_differences,file = "./continent_mass_differences.csv")
+
+group_by()
+hist(mammal_sizes$log_mass)
